@@ -19,5 +19,6 @@ opam install phonetic
 dune build            # build the library
 dune install          # install the built library
 dune runtest          # run unit tests
+dune build @runbench  # run benchmark
 dune clean            # clean compilation artifacts
 ```

@@ -10,3 +10,11 @@
 )
 
 (alias (name runtest) (action (run ./test.exe) ) )
+
+(executable
+  (name bench)
+  (modules bench)
+  (libraries phonetic benchmark test_utils)
+)
+
+(alias (name runbench) (action (run ./bench.exe) ) )
