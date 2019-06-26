@@ -1,0 +1,12 @@
+(library
+  (name test_utils)
+  (modules test_utils)
+)
+
+(executable
+  (name test)
+  (modules test)
+  (libraries phonetic oUnit test_utils)
+)
+
+(alias (name runtest) (action (run ./test.exe) ) )
