@@ -22,40 +22,44 @@
  *)
 
 let slavo_Germanic sstring =
+  let len = String.length sstring in
   let rec loop i =
-    if i = String.length sstring then false
+    if i = len then false
     else
-      match (String.sub sstring i 1) with
-      | "W" | "K" -> true
-      | "C" ->
-          if (i+1) < String.length sstring then
-            if (String.sub sstring (i+1) 1) = "Z" then true else loop (i+1)
-          else false
+      match String.unsafe_get sstring i with
+      | 'W' | 'K' -> true
+      | 'C' ->
+         if i + 1 < len then
+           if String.unsafe_get sstring (i + 1) = 'Z' then true else loop (i+1)
+         else false
       | _ -> loop (i + 1)
   in
   loop 0
 
 let is_vowel sstring pos =
   if pos < 0 then false
-  else List.mem (String.sub sstring pos 1) ["A"; "E"; "I"; "O"; "U"; "Y"]
+  else match String.get sstring pos with
+       | 'A' | 'E' | 'I' | 'O' | 'U' | 'Y' -> true
+       | _ -> false
 
 let string_at sstring start length list =
-  let ret = ref false in
-    try
-      if ((start < 0) || (start >= String.length(sstring))) then !ret
-      else
-        begin
-          for i = 0 to Array.length list - 1 do
-            if (list.(i) = String.sub sstring start length) then
-              begin
-                ret:= true;
-                raise Exit;
-              end
-            else ()
-          done;
-          !ret
+  start >= 0
+  && begin
+      let len1 = String.length sstring in
+      start < len1
+      && begin
+          Array.exists
+            begin fun s2 ->
+            let rec loop i1 i2 =
+              i2 = length
+              || (i1 <> len1
+                  && String.unsafe_get sstring i1 = String.unsafe_get s2 i2
+                  && loop (i1 + 1) (i2 + 1))
+            in loop start 0
+            end
+            list
         end
-    with Exit -> !ret
+    end
 
 let double_metaphone sstring =
   let primary   = ref "" in
