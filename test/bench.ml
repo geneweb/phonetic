@@ -4,3 +4,5 @@ let bench name n fn =
 let () =
   bench "DoubleMetaphone.double_metaphone" 1000L
     (fun x -> ignore @@ Phonetic.DoubleMetaphone.double_metaphone x.input)
+; bench "Soundex.soundex" 20000L
+    (fun x -> ignore @@ Phonetic.Soundex.soundex x.input)
