@@ -26,7 +26,10 @@ bug-reports: "https://github.com/geneweb/phonetic/issues"
 
 dev-repo: "git+https://github.com/geneweb/phonetic.git"
 
-depends: [ "oUnit" { with-test } ]
+depends: [
+  "benchmark" { with-test }
+  "ounit" { with-test }
+  ]
 
 build: [ [ "dune" "build"] ]
 
