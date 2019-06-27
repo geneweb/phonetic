@@ -2,6 +2,8 @@
 
 Phonetic algorithm in OCaml
 
+[![Travis build status](https://travis-ci.org/geneweb/phonetic.svg?branch=master)](https://travis-ci.org/geneweb/phonetic)
+
 ## Installation
 
 ```bash
