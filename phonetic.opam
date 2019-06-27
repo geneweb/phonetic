@@ -9,6 +9,7 @@ synopsis: "Phonetic algorithm in OCaml"
 description: """
 Phonetic algorithm in OCaml:
 - Double metaphone
+- Soundex
 """
 
 maintainer: "Julien Sagot <julien.sagot@geneanet.org>"
