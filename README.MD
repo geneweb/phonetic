@@ -5,9 +5,9 @@ Phonetic algorithm in OCaml
 |            | Linux              | macOS              |
 | ---:       | :---:              | :---:              |
 | OCaml 4.05 | ![linux-ocaml4.05] | ![macos-ocaml4.05] |
-| OCaml 4.06 | ![linux-ocaml4.06] | ![macos-ocaml4.05] |
-| OCaml 4.07 | ![linux-ocaml4.07] | ![macos-ocaml4.05] |
-| OCaml 4.08 | ![linux-ocaml4.08] | ![macos-ocaml4.05] |
+| OCaml 4.06 | ![linux-ocaml4.06] | ![macos-ocaml4.06] |
+| OCaml 4.07 | ![linux-ocaml4.07] | ![macos-ocaml4.07] |
+| OCaml 4.08 | ![linux-ocaml4.08] | ![macos-ocaml4.08] |
 
 [linux-ocaml4.05]:https://travis-matrix-badges.herokuapp.com/repos/geneweb/phonetic/branches/master/1
 [linux-ocaml4.06]:https://travis-matrix-badges.herokuapp.com/repos/geneweb/phonetic/branches/master/2
