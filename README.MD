@@ -27,7 +27,9 @@ opam install phonetic
 ## What's inside
 
 - `DoubleMetaphone.double_metaphone`:
-  [Double Metaphone](https://en.wikipedia.org/wiki/Metaphone#Double_Metaphone)
+  [Double Metaphone (Wikipedia)](https://en.wikipedia.org/wiki/Metaphone#Double_Metaphone)
+- `Soundex.soundex`:
+  [Soundex (Wikipedia)](https://en.wikipedia.org/wiki/Soundex)
 
 ## Instructions for developpers
 
